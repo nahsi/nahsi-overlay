@@ -24,4 +24,6 @@ RDEPEND="
 	app-shells/fzf
 	sys-apps/kexec-tools
 	sys-block/mbuffer
+	dev-perl/Config-IniFiles
+	dev-perl/YAML-PP
 "
