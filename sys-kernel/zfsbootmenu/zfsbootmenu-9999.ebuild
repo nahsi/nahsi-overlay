@@ -26,4 +26,6 @@ RDEPEND="
 	sys-block/mbuffer
 	dev-perl/Config-IniFiles
 	dev-perl/YAML-PP
+	dev-perl/boolean
+	dev-perl/Sort-Versions
 "
