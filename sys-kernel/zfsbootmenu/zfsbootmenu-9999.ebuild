@@ -31,7 +31,7 @@ RDEPEND="
 "
 
 PATCHES="
-	"${FILESDIR}/${PN}"-0001-fix-udev-paths.patch
+	"${FILESDIR}/${PN}"-0001-fix-paths.patch
 "
 
 src_prepare() {
