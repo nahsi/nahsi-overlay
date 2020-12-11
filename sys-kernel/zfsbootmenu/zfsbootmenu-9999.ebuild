@@ -29,3 +29,11 @@ RDEPEND="
 	dev-perl/boolean
 	dev-perl/Sort-Versions
 "
+
+PATCHES="
+	"${FILESDIR}/${PN}"-0001-fix-udev-paths.patch
+"
+
+src_prepare() {
+	default
+}
