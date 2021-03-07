@@ -11,19 +11,10 @@ SRC_URI=""
 EGIT_REPO_URI="https://github.com/hyperion-project/${PN}.ng"
 EGIT_SUBMODULES=()
 
-if [[ ${PV} != 9999 ]]; then
-	MY_PV="${PV/_/-}"
-	MY_PV="${MY_PV/alpha9/alpha.9}"
-	EGIT_COMMIT="${MY_PV}"
-fi
-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 IUSE="cec +spi tinkerforge +qt-grabber +usb +v4l +xcb +zeroconf"
-
-# currently only platform x11 is supported
-# TODO extend for rpi amlogic amlogic64
 
 DEPEND="
 	dev-lang/python
@@ -59,13 +50,6 @@ RDEPEND="
 	${DEPEND}
 "
 
-PATCHES=(
-	"${FILESDIR}"/0001-Proto-fix-Error-macro-conflict.patch
-	"${FILESDIR}"/0001-CMake-prevent-lib-copies-for-package-creation.patch
-	"${FILESDIR}"/0001-Cmake-fix-rpath.patch
-	"${FILESDIR}"/0001-webserver-Cmake-fix-out-of-tree-build.patch
-)
-
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_BUILD_TYPE=Release
@@ -91,7 +75,6 @@ src_configure() {
 		-DUSE_SYSTEM_PROTO_LIBS=on
 		-DUSE_SYSTEM_FLATBUFFERS_LIBS=on
 		-DUSE_SYSTEM_MBEDTLS_LIBS=on
-		-DUSE_SHARED_AVAHI_LIBS=on
 		-Wno-dev
 	)
 	cmake_src_configure
