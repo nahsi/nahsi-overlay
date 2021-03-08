@@ -1,18 +1,12 @@
 #!/sbin/openrc-run
-# Released under the 2-clause BSD license.
 
-description="Start and stop hyperiond"
+description="Hyperion - an open source ambient light software"
+user="${RC_SVCNAME}"
+group="${RC_SVCNAME}"
+pidfile="/run/${RC_SVCNAME}.pid"
 
-start()
-{
-        ebegin "Starting hyperiond"
-        start-stop-daemon --start -u hyperion --background --pidfile /var/run/hyperiond.pid --make-pidfile --exec /usr/bin/hyperiond /etc/hyperion/hyperion.config.json
-        eend $?
-}
+command="/usr/bin/hyperiond"
+command_background="true"
+command_args="--userdata /var/lib/${RC_SVCNAME}"
 
-stop()
-{
-        ebegin "Stopping hyperiond"
-        start-stop-daemon --stop --pidfile /var/run/hyperiond.pid
-        eend $?
-}
+start_stop_daemon_args="--user ${user} --group ${group} --stdout-logger logger --stderr-logger logger"
