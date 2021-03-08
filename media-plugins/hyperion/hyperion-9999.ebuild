@@ -5,7 +5,7 @@ EAPI=7
 
 inherit git-r3 cmake systemd
 
-DESCRIPTION="An opensource 'AmbiLight' implementation (next generation)"
+DESCRIPTION="An  open source ambient light software"
 HOMEPAGE="https://hyperion-project.org/"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/hyperion-project/${PN}.ng"
@@ -46,6 +46,7 @@ DEPEND="
 	usb? ( virtual/libusb )
 "
 RDEPEND="
+	acct-group/hyperion
 	acct-user/hyperion
 	${DEPEND}
 "
@@ -83,13 +84,21 @@ src_configure() {
 src_install() {
 	cmake_src_install
 
-	insinto /etc/hyperion
+	insinto /etc/${PN}
 	doins "${S}/config/hyperion.config.json.default"
 	doins "${S}/config/hyperion.config.json.commented"
 	ewarn "An example config file is provided in /etc/hyperion."
 	ewarn "To allow access to certain input devices you have add the hyperion"
 	ewarn "user to the uucp group: usermod -G uucp hyperion"
 
-	newinitd "${FILESDIR}"/hyperion.initd hyperion
+	keepdir /var/lib/${PN}
+	fowners ${PN}:${PN} /var/lib/${PN}
+	fperms 0755 /var/lib/${PN}
+
+	keepdir /etc/${PN}
+	fowners ${PN}:${PN} /etc/${PN}
+	fperms 0755 /etc/${PN}
+
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	systemd_newunit "${S}/bin/service/hyperion.systemd" hyperion.service
 }
