@@ -129,7 +129,7 @@ SRC_URI="https://github.com/grafana/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 		${EGO_SUM_SRC_URI}"
 
 src_compile() {
-	go build || die
+	make static
 }
 
 src_install() {
