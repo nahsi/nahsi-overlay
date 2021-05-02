@@ -1,33 +1,9 @@
-diff --git a/90zfsbootmenu/module-setup.sh b/90zfsbootmenu/module-setup.sh
-index f6e7f25..09dc3b8 100755
---- a/90zfsbootmenu/module-setup.sh
-+++ b/90zfsbootmenu/module-setup.sh
-@@ -46,9 +46,9 @@ install() {
-   local _rule _exec _ret
-
-   local udev_rules=(
--    "/usr/lib/udev/rules.d/90-zfs.rules"
--    "/usr/lib/udev/rules.d/69-vdev.rules"
--    "/usr/lib/udev/rules.d/60-zvol.rules"
-+    "/lib/udev/rules.d/90-zfs.rules"
-+    "/lib/udev/rules.d/69-vdev.rules"
-+    "/lib/udev/rules.d/60-zvol.rules"
-   )
-
-   for _rule in "${udev_rules[@]}"; do
-@@ -59,8 +59,8 @@ install() {
-   done
-
-   local essential_execs=(
--    "/usr/lib/udev/vdev_id"
--    "/usr/lib/udev/zvol_id"
-+    "/lib/udev/vdev_id"
-+    "/lib/udev/zvol_id"
-     "zfs"
-     "zpool"
-     "hostid"
-@@ -104,7 +104,7 @@ install() {
-
+diff --git a/zfsbootmenu-1.9.0/90zfsbootmenu/module-setup.sh b/zfsbootmenu-1.9.0/90zfsbootmenu/module-setup.sh
+index fd6b27f..e4017b1 100755
+--- a/zfsbootmenu-1.9.0/90zfsbootmenu/module-setup.sh
++++ b/zfsbootmenu-1.9.0/90zfsbootmenu/module-setup.sh
+@@ -110,7 +110,7 @@ install() {
+ 
    # Workaround for zfsonlinux/zfs#4749 by ensuring libgcc_s.so(.1) is included
    _ret=0
 -  if ldd /usr/bin/zpool | grep -qF 'libgcc_s.so'; then
