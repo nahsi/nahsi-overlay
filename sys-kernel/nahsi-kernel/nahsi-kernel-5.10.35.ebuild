@@ -37,10 +37,12 @@ src_prepare() {
 	# prepare the default config
 	case ${ARCH} in
 		amd64)
-			cp "${FILESDIR}/base.config" .config || die
+			cp "${FILESDIR}/amd64-base.config" .config || die
 			;;
 		*)
 			die "Unsupported arch ${ARCH}"
 			;;
 	esac
+
+	kernel-build_merge_configs "${merge_configs[@]}"
 }
