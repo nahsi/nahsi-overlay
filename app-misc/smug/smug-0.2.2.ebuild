@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit go-module
+inherit bash-completion-r1 go-module
 
 DESCRIPTION="A session manager for tmux written in Go"
 HOMEPAGE="https://github.com/ivaaaan/smug"
@@ -34,4 +34,5 @@ src_compile() {
 
 src_install() {
 	dobin smug
+	dobashcomp "${S}/completion/smug.bash"
 }
