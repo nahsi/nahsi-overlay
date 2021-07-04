@@ -25,5 +25,5 @@ BDEPEND="
 "
 
 src_install() {
-	emake UDEVRULESDIR="/lib/udev/rules.d/" install
+	emake UDEVRULESDIR="/lib/udev/rules.d/" DESTDIR="${D}" install
 }
