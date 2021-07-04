@@ -19,11 +19,9 @@ KEYWORDS="~amd64"
 IUSE="systray display-mirroring shaders discord"
 
 DEPEND="
-	media-video/mpv[libmpv]
 	dev-python/python-mpv[${PYTHON_USEDEP}]
 	dev-python/python-mpv-jsonipc[${PYTHON_USEDEP}]
 	dev-python/jellyfin-apiclient-python[${PYTHON_USEDEP}]
-	dev-lang/python:*[tk]
 	systray? ( dev-python/pystray[${PYTHON_USEDEP}] )
 	display-mirroring? (
 		dev-python/jinja[${PYTHON_USEDEP}]
