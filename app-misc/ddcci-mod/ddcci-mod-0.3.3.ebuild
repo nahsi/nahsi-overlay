@@ -16,6 +16,8 @@ SLOT="0"
 
 KEYWORDS="~amd64"
 
+MODULE_NAMES="ddcci(extra:${S}/ddcci:${S}/ddcci) ddcci-backlight(extra:${S}/ddcci-backlight:${S}/ddcci-backlight)"
+
 pkg_pretend() {
 	if has_version virtual/dist-kernel && ! use dist-kernel; then
 		ewarn "You have virtual/dist-kernel installed, but"
@@ -32,20 +34,15 @@ pkg_setup() {
 	linux-mod_pkg_setup
 }
 
-src_compile() {
-	set_arch_to_kernel
-	make
-}
-
 src_install() {
 	set_arch_to_kernel
-	make install
+	linux-mod_src_install
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	if [[ -z ${ROOT} ]] && use dist-kernel; then
+	if use dist-kernel; then
 		set_arch_to_portage
 		dist-kernel_reinstall_initramfs "${KV_DIR}" "${KV_FULL}"
 	fi
