@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>nahsi@airmail.cc</email>
+        <name>Anatoly Laskaris</name>
+    </maintainer>
+    <use>
+        <flag name="geoclue">Enable geolocation support through <pkg>app-misc/geoclue</pkg></flag>
+    </use>
+</pkgmetadata>
