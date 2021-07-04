@@ -23,3 +23,7 @@ DEPEND="
 BDEPEND="
 	dev-go/go-md2man
 "
+
+src_install() {
+	emake UDEVRULESDIR="/lib/udev/rules.d/" install
+}
