@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 MODULE_NAMES="ddcci(extra:${S}/ddcci:${S}/ddcci) ddcci-backlight(extra:${S}/ddcci-backlight:${S}/ddcci-backlight)"
+MODULESD_DDCCI_ENABLED="yes"
+MODULESD_DDCCI_BACKLIGHT_ENABLED="yes"
 
 pkg_pretend() {
 	if has_version virtual/dist-kernel && ! use dist-kernel; then
