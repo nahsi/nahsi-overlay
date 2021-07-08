@@ -1,6 +1,6 @@
 --- a/90zfsbootmenu/module-setup.sh
 +++ b/90zfsbootmenu/module-setup.sh
-@@ -110,7 +110,7 @@ install() {
+@@ -114,7 +114,7 @@ install() {
  
    # Workaround for zfsonlinux/zfs#4749 by ensuring libgcc_s.so(.1) is included
    _ret=0
