@@ -34,5 +34,5 @@ src_compile() {
 
 src_install() {
 	dobin smug
-	dobashcomp "${S}/completion/smug.bash"
+	newbashcomp "${S}/completion/smug.bash" smug
 }
