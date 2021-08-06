@@ -7,9 +7,11 @@ inherit git-r3 cmake systemd
 
 DESCRIPTION="An  open source ambient light software"
 HOMEPAGE="https://hyperion-project.org/"
+
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/hyperion-project/${PN}.ng"
 EGIT_SUBMODULES=()
+EGIT_TAG="2.0.0-alpha.${PV}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -56,14 +58,9 @@ src_configure() {
 		-DCMAKE_BUILD_TYPE=Release
 		-DPLATFORM=x11
 		-DBUILD_SHARED_LIBS=off
-		-DENABLE_AMLOGIC=off
-		-DENABLE_OSX=off
 		-DENABLE_X11=on
 		-DENABLE_EXPERIMENTAL=off
-		-DENABLE_DISPMANX=off # rpi lib
-		-DENABLE_DX=off # DirectX
-		-DENABLE_PROFILER=off # DirectX
-		-DENABLE_WS281XPWM=off # rpi lib
+		-DENABLE_DEPLOY_DEPENDENCIES=off
 		-DENABLE_FB=on
 		-DENABLE_QT=$(usex qt-grabber)
 		-DENABLE_TINKERFORGE=$(usex tinkerforge)
@@ -86,7 +83,6 @@ src_install() {
 
 	insinto /etc/${PN}
 	doins "${S}/config/hyperion.config.json.default"
-	doins "${S}/config/hyperion.config.json.commented"
 	ewarn "An example config file is provided in /etc/hyperion."
 	ewarn "To allow access to certain input devices you have add the hyperion"
 	ewarn "user to the uucp group: usermod -G uucp hyperion"
