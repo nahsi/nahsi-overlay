@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-S="${WORKDIR}/envoy-${PV}-linux-${ARCH}"
+S="${WORKDIR}/envoy-v${PV}-linux-${ARCH}"
 
 src_install() {
 	dobin bin/envoy
