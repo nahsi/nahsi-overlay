@@ -6,7 +6,7 @@ EAPI=7
 inherit kernel-build
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 6 ))
+GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 7 ))
 
 DESCRIPTION="Linux kernel built with Gentoo patches"
 HOMEPAGE="https://www.kernel.org/"
