@@ -29,7 +29,3 @@ RDEPEND="
 	dev-perl/boolean
 	dev-perl/Sort-Versions
 "
-
-PATCHES="
-	"${FILESDIR}/${PN}"-0001-fix-paths.patch
-"
