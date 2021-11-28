@@ -5,7 +5,7 @@ EAPI=7
 
 CRATES="
 	ansi_term-0.11.0
-	anyhow-1.0.40
+	anyhow-1.0.48
 	atty-0.2.14
 	bitflags-1.2.1
 	cfg-if-1.0.0
@@ -13,25 +13,22 @@ CRATES="
 	either-1.6.1
 	heck-0.3.2
 	hermit-abi-0.1.18
-	itertools-0.10.0
+	itertools-0.10.1
 	lazy_static-1.4.0
 	libc-0.2.88
-	pest-2.1.3
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
-	proc-macro2-1.0.26
+	proc-macro2-1.0.28
 	quote-1.0.9
-	rstest-0.9.0
-	rustc_version-0.3.3
-	semver-0.11.0
-	semver-parser-0.10.2
+	rstest-0.11.0
+	rustc_version-0.4.0
+	semver-1.0.4
 	strsim-0.8.0
-	structopt-0.3.21
-	structopt-derive-0.4.14
-	syn-1.0.71
+	structopt-0.3.25
+	structopt-derive-0.4.18
+	syn-1.0.72
 	term_size-0.3.2
 	textwrap-0.11.0
-	ucd-trie-0.1.3
 	unicode-segmentation-1.7.1
 	unicode-width-0.1.8
 	unicode-xid-0.2.1
