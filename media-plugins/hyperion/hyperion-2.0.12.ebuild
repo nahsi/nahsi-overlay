@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Foundation
+# Copyright 2022 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -11,7 +11,7 @@ HOMEPAGE="https://hyperion-project.org/"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/hyperion-project/${PN}.ng"
 EGIT_SUBMODULES=()
-EGIT_TAG="2.0.0-alpha.${PV}"
+EGIT_TAG="2.0.12"
 
 LICENSE="MIT"
 SLOT="0"
