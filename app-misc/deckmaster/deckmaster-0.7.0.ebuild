@@ -93,7 +93,7 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	go build -o ${PN} -v -work -x -ldflags \
-		"-X main.version=${PV} -X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+		"-X main.Version=${PV} -X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
 		|| die "compile failed"
 }
 
