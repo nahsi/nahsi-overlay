@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Foundation
+# Copyright 2022 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -29,10 +29,10 @@ SRC_URI="https://github.com/ivaaaan/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 		${EGO_SUM_SRC_URI}"
 
 src_compile() {
-	go build || die
+  go build || die
 }
 
 src_install() {
-	dobin smug
-	newbashcomp "${S}/completion/smug.bash" smug
+  dobin smug
+  newbashcomp "${S}/completion/smug.bash" smug
 }
