@@ -8,12 +8,6 @@ inherit go-module
 DESCRIPTION="An application to control your Elgato Stream Deck on Linux"
 HOMEPAGE="https://github.com/muesli/deckmaster"
 
-# Building this list can be done by:
-# cd $(mktemp -d)
-# PV="0.6.0"
-# wget https://github.com/muesli/deckmaster/archive/v${PV}.tar.gz
-# tar -xvzf v${PV}.tar.gz
-# sed -Ee 's/^(.+) h1:.+$/\t"\1"/g' deckmaster-${PV}/go.sum > go.sum.out
 EGO_SUM=(
 	"github.com/BurntSushi/freetype-go v0.0.0-20160129220410-b763ddbfe298"
 	"github.com/BurntSushi/freetype-go v0.0.0-20160129220410-b763ddbfe298/go.mod"
@@ -23,8 +17,8 @@ EGO_SUM=(
 	"github.com/BurntSushi/toml v1.0.0/go.mod"
 	"github.com/atotto/clipboard v0.1.4"
 	"github.com/atotto/clipboard v0.1.4/go.mod"
-	"github.com/bendahl/uinput v1.5.0"
-	"github.com/bendahl/uinput v1.5.0/go.mod"
+	"github.com/bendahl/uinput v1.5.1"
+	"github.com/bendahl/uinput v1.5.1/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.1/go.mod"
 	"github.com/davecgh/go-spew v1.1.1"
 	"github.com/davecgh/go-spew v1.1.1/go.mod"
@@ -48,8 +42,8 @@ EGO_SUM=(
 	"github.com/mitchellh/go-homedir v1.1.0"
 	"github.com/mitchellh/go-homedir v1.1.0/go.mod"
 	"github.com/muesli/coral v1.0.0/go.mod"
-	"github.com/muesli/streamdeck v0.2.3-0.20220205132636-dbbc8865ab8c"
-	"github.com/muesli/streamdeck v0.2.3-0.20220205132636-dbbc8865ab8c/go.mod"
+	"github.com/muesli/streamdeck v0.3.0"
+	"github.com/muesli/streamdeck v0.3.0/go.mod"
 	"github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646"
 	"github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646/go.mod"
 	"github.com/pmezard/go-difflib v1.0.0"
