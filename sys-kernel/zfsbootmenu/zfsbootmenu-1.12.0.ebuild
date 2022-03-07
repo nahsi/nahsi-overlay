@@ -16,7 +16,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
+IUSE="+ssh"
 
 RDEPEND="
 	>=sys-kernel/dracut-0.5.0
