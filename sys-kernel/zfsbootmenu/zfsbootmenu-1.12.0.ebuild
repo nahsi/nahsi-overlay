@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -28,4 +28,8 @@ RDEPEND="
 	dev-perl/YAML-PP
 	dev-perl/boolean
 	dev-perl/Sort-Versions
+	ssh? (
+		net-misc/dropbear
+		sys-kernel/dracut-crypt-ssh
+	)
 "
