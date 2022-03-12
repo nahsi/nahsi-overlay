@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+# Copyright 2022 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+command="/usr/bin/innernet-server"
+name="Innernet server"
+description="Innernet server"
+command_args="serve ${INNERNET_OPTS}"
+supervisor="supervise-daemon"
+
+depend() {
+	need net
+}
