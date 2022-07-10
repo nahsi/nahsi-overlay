@@ -24,7 +24,16 @@ KEYWORDS="~amd64"
 PDEPEND="
 	>=virtual/dist-kernel-${PV}"
 
-QA_FLAGS_IGNORED="usr/src/linux-.*/scripts/gcc-plugins/.*.so"
+BDEPEND="
+	debug? ( dev-util/pahole )
+"
+
+QA_FLAGS_IGNORED="
+	usr/src/linux-.*/scripts/gcc-plugins/.*.so
+	usr/src/linux-.*/vmlinux
+"
+
+IUSE="debug"
 
 src_prepare() {
 	local PATCHES=(
