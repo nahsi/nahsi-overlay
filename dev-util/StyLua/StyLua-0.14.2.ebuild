@@ -105,6 +105,8 @@ CRATES="
 	termtree-0.2.4
 	textwrap-0.11.0
 	textwrap-0.15.0
+	thiserror-1.0.31
+	thiserror-impl-1.0.31
 	thread_local-1.1.3
 	threadpool-1.8.1
 	tinytemplate-1.2.1
@@ -115,11 +117,11 @@ CRATES="
 	version_check-0.9.3
 	wait-timeout-0.2.0
 	walkdir-2.3.2
-	wasm-bindgen-0.2.78
-	wasm-bindgen-backend-0.2.78
-	wasm-bindgen-macro-0.2.78
-	wasm-bindgen-macro-support-0.2.78
-	wasm-bindgen-shared-0.2.78
+	wasm-bindgen-0.2.81
+	wasm-bindgen-backend-0.2.81
+	wasm-bindgen-macro-0.2.81
+	wasm-bindgen-macro-support-0.2.81
+	wasm-bindgen-shared-0.2.81
 	web-sys-0.3.55
 	winapi-0.3.9
 	winapi-i686-pc-windows-gnu-0.4.0
