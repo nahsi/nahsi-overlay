@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual to depend on any Distribution Kernel
+EAPI=7
+KEYWORDS=~amd64
+RDEPEND=|| ( ~sys-kernel/nahsi-kernel-5.10.136 )
+SLOT=0/5.10.136
+_md5_=84966882984c14ad57ef274a4172f60f
