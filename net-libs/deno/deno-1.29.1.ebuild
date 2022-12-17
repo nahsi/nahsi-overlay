@@ -15,7 +15,7 @@ CRATES="
 	alloc-no-stdlib-2.0.4
 	alloc-stdlib-0.2.2
 	android_system_properties-0.1.5
-	anyhow-1.0.65
+	anyhow-1.0.66
 	arrayvec-0.7.2
 	ash-0.37.0+1.3.209
 	ast_node-0.8.6
@@ -27,7 +27,8 @@ CRATES="
 	auto_impl-0.5.0
 	autocfg-1.1.0
 	base16ct-0.1.1
-	base64-0.13.0
+	base32-0.4.0
+	base64-0.13.1
 	base64-simd-0.7.0
 	base64ct-1.5.2
 	bencher-0.1.5
@@ -43,7 +44,7 @@ CRATES="
 	block-padding-0.3.2
 	brotli-3.3.4
 	brotli-decompressor-2.3.2
-	bumpalo-3.11.0
+	bumpalo-3.11.1
 	byteorder-1.4.3
 	bytes-1.2.1
 	cache_control-0.2.0
@@ -59,7 +60,7 @@ CRATES="
 	clap_lex-0.1.1
 	clipboard-win-4.4.2
 	codespan-reporting-0.11.1
-	console-0.15.1
+	console_static_text-0.3.3
 	const-oid-0.9.0
 	convert_case-0.4.0
 	copyless-0.1.5
@@ -85,14 +86,14 @@ CRATES="
 	darling_macro-0.13.4
 	dashmap-5.4.0
 	data-encoding-2.3.2
-	data-url-0.1.1
+	data-url-0.2.0
 	debug_unreachable-0.1.1
-	deno_ast-0.19.0
-	deno_doc-0.46.0
-	deno_emit-0.9.0
-	deno_graph-0.34.0
-	deno_lint-0.33.0
-	deno_task_shell-0.5.2
+	deno_ast-0.21.0
+	deno_doc-0.51.0
+	deno_emit-0.12.0
+	deno_graph-0.39.0
+	deno_lint-0.35.0
+	deno_task_shell-0.8.2
 	der-0.6.0
 	derive_more-0.99.17
 	diff-0.1.13
@@ -103,18 +104,17 @@ CRATES="
 	dlopen-0.1.8
 	dlopen_derive-0.1.4
 	dotenv-0.15.0
-	dprint-core-0.59.0
-	dprint-plugin-json-0.15.6
-	dprint-plugin-markdown-0.14.1
-	dprint-plugin-typescript-0.74.0
-	dprint-swc-ext-0.4.0
+	dprint-core-0.60.0
+	dprint-plugin-json-0.17.0
+	dprint-plugin-markdown-0.15.1
+	dprint-plugin-typescript-0.79.0
+	dprint-swc-ext-0.5.0
 	dyn-clone-1.0.9
 	dynasm-1.2.3
 	dynasmrt-1.2.3
 	ecdsa-0.14.7
 	either-1.8.0
 	elliptic-curve-0.12.3
-	encode_unicode-0.3.6
 	encoding_rs-0.8.31
 	endian-type-0.1.2
 	enum-as-inner-0.5.1
@@ -124,7 +124,7 @@ CRATES="
 	errno-0.2.8
 	errno-dragonfly-0.1.2
 	error-code-2.3.1
-	eszip-0.28.0
+	eszip-0.31.0
 	fallible-iterator-0.2.0
 	fallible-streaming-iterator-0.1.9
 	fancy-regex-0.10.0
@@ -189,9 +189,8 @@ CRATES="
 	idna-0.2.3
 	idna-0.3.0
 	if_chain-1.0.2
-	import_map-0.12.1
-	indexmap-1.9.1
-	indicatif-0.17.1
+	import_map-0.13.0
+	indexmap-1.9.2
 	inotify-0.9.6
 	inotify-sys-0.1.5
 	inout-0.1.3
@@ -230,7 +229,7 @@ CRATES="
 	lock_api-0.4.8
 	log-0.4.17
 	lru-cache-0.1.2
-	lsp-types-0.93.1
+	lsp-types-0.93.2
 	lzzzz-1.0.3
 	malloc_buf-0.0.6
 	match_cfg-0.1.0
@@ -243,7 +242,7 @@ CRATES="
 	miniz_oxide-0.5.4
 	mio-0.8.4
 	mitata-0.0.7
-	monch-0.2.1
+	monch-0.4.0
 	naga-0.9.0
 	napi-build-1.2.1
 	napi-sys-2.2.2
@@ -252,6 +251,7 @@ CRATES="
 	nibble_vec-0.1.0
 	nix-0.24.2
 	notify-5.0.0
+	ntapi-0.4.0
 	num-bigint-0.4.3
 	num-bigint-dig-0.8.1
 	num-integer-0.1.45
@@ -259,10 +259,9 @@ CRATES="
 	num-traits-0.2.15
 	num_cpus-1.13.1
 	num_threads-0.1.6
-	number_prefix-0.4.0
 	objc-0.2.7
 	objc_exception-0.1.2
-	once_cell-1.14.0
+	once_cell-1.16.0
 	opaque-debug-0.3.0
 	openssl-probe-0.1.5
 	os_pipe-1.0.1
@@ -297,12 +296,13 @@ CRATES="
 	ppv-lite86-0.2.16
 	precomputed-hash-0.1.1
 	pretty_assertions-1.3.0
+	prettyplease-0.1.21
 	proc-macro-crate-1.2.1
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
 	proc-macro-hack-0.5.19
 	proc-macro2-0.4.30
-	proc-macro2-1.0.43
+	proc-macro2-1.0.47
 	profiling-1.0.6
 	pty-0.2.2
 	pulldown-cmark-0.9.2
@@ -352,9 +352,9 @@ CRATES="
 	semver-0.9.0
 	semver-1.0.14
 	semver-parser-0.7.0
-	serde-1.0.144
+	serde-1.0.149
 	serde_bytes-0.11.7
-	serde_derive-1.0.144
+	serde_derive-1.0.149
 	serde_json-1.0.85
 	serde_repr-0.1.9
 	serde_urlencoded-0.7.1
@@ -374,47 +374,47 @@ CRATES="
 	spin-0.5.2
 	spirv-0.2.0+1.5.4
 	spki-0.6.0
+	stable_deref_trait-1.2.0
 	static_assertions-1.1.0
 	str-buf-1.0.6
 	string_cache-0.8.4
 	string_cache_codegen-0.5.2
-	string_enum-0.3.1
+	string_enum-0.3.2
 	strsim-0.10.0
 	subtle-2.4.1
-	swc_atoms-0.4.10
-	swc_bundler-0.185.5
-	swc_common-0.27.13
-	swc_config-0.1.2
+	swc_atoms-0.4.23
+	swc_bundler-0.192.45
+	swc_common-0.29.10
+	swc_config-0.1.4
 	swc_config_macro-0.1.0
-	swc_ecma_ast-0.90.17
-	swc_ecma_codegen-0.123.2
+	swc_ecma_ast-0.94.14
+	swc_ecma_codegen-0.127.23
 	swc_ecma_codegen_macros-0.7.1
-	swc_ecma_dep_graph-0.90.1
-	swc_ecma_loader-0.39.4
-	swc_ecma_parser-0.118.7
-	swc_ecma_transforms_base-0.106.4
-	swc_ecma_transforms_classes-0.95.1
+	swc_ecma_dep_graph-0.94.19
+	swc_ecma_loader-0.41.11
+	swc_ecma_parser-0.122.19
+	swc_ecma_transforms_base-0.111.33
+	swc_ecma_transforms_classes-0.100.32
 	swc_ecma_transforms_macros-0.5.0
-	swc_ecma_transforms_optimization-0.160.9
-	swc_ecma_transforms_proposal-0.137.1
-	swc_ecma_transforms_react-0.148.1
-	swc_ecma_transforms_typescript-0.152.1
-	swc_ecma_utils-0.101.3
-	swc_ecma_visit-0.76.7
+	swc_ecma_transforms_optimization-0.167.26
+	swc_ecma_transforms_proposal-0.144.20
+	swc_ecma_transforms_react-0.155.21
+	swc_ecma_transforms_typescript-0.159.22
+	swc_ecma_utils-0.105.24
+	swc_ecma_visit-0.80.14
 	swc_eq_ignore_macros-0.1.1
-	swc_fast_graph-0.15.6
-	swc_graph_analyzer-0.16.4
+	swc_fast_graph-0.17.11
+	swc_graph_analyzer-0.18.11
 	swc_macros_common-0.3.6
-	swc_visit-0.5.2
-	swc_visit_macros-0.5.3
+	swc_visit-0.5.3
+	swc_visit_macros-0.5.4
 	syn-0.15.44
-	syn-1.0.99
+	syn-1.0.105
 	synstructure-0.12.6
-	sys-info-0.9.1
 	tar-0.4.38
 	tempfile-3.3.0
 	termcolor-1.1.3
-	terminal_size-0.1.17
+	testing_macros-0.2.7
 	text-size-1.1.0
 	text_lines-0.6.0
 	textwrap-0.15.1
@@ -439,12 +439,13 @@ CRATES="
 	tracing-0.1.36
 	tracing-attributes-0.1.22
 	tracing-core-0.1.29
+	triomphe-0.1.8
 	trust-dns-client-0.22.0
 	trust-dns-proto-0.22.0
 	trust-dns-resolver-0.22.0
 	trust-dns-server-0.22.0
 	try-lock-0.2.3
-	trybuild-1.0.64
+	trybuild-1.0.72
 	tungstenite-0.16.0
 	twox-hash-1.6.3
 	typed-arena-2.0.1
@@ -471,10 +472,12 @@ CRATES="
 	utf-8-0.7.6
 	utf8parse-0.2.0
 	uuid-1.1.2
-	v8-0.53.1
+	v8-0.60.0
 	vcpkg-0.2.15
 	version_check-0.9.4
 	void-1.0.2
+	vte-0.11.0
+	vte_generate_state_changes-0.1.1
 	walkdir-2.3.2
 	want-0.3.0
 	wasi-0.9.0+wasi-snapshot-preview1
@@ -522,16 +525,20 @@ inherit cargo
 DESCRIPTION="A secure JavaScript and TypeScript runtime."
 HOMEPAGE="https://deno.land"
 SRC_URI="https://github.com/denoland/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+		https://github.com/denoland/rusty_v8/releases/download/v0.60.0/librusty_v8_release_x86_64-unknown-linux-gnu.a -> librusty_v8_release_${PV}_x86_64-unknown-linux-gnu.a
 		$(cargo_crate_uris ${CRATES})"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
 src_unpack() {
+  mkdir -p "${T}/v0.60.0" || die
+  ln -sf "${DISTDIR}/librusty_v8_release_${PV}_x86_64-unknown-linux-gnu.a" "${T}/v0.60.0/librusty_v8_release_x86_64-unknown-linux-gnu.a" || die
   cargo_src_unpack
 }
 
 src_configure() {
+  export RUSTY_V8_MIRROR=${T}
   cargo_src_configure -vv
 }
 
